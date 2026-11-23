@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/stockCard"
+    style="@style/Widget.Cathay.StockCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/spacing_lg"
+            android:paddingTop="@dimen/spacing_lg"
+            android:paddingBottom="@dimen/spacing_md">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvStockCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_stock_code_chip"
+                android:paddingHorizontal="@dimen/spacing_sm"
+                android:paddingVertical="@dimen/spacing_xs"
+                android:textAppearance="@style/TextAppearance.Cathay.Code"
+                tools:text="9958" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvStockName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_sm"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.Cathay.Name"
+                tools:text="世紀鋼" />
+
+            <!-- 開盤 / 收盤 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_lg"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/metric_cell_gap"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvOpeningLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/spacing_sm"
+                        android:maxLines="1"
+                        android:text="@string/opening_price"
+                        android:textAppearance="@style/TextAppearance.Cathay.Label" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvOpeningPrice"
+                        style="@style/CathayAutoValueText"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/metric_value_height"
+                        android:layout_weight="1"
+                        tools:text="73.5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvClosingLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/spacing_sm"
+                        android:maxLines="1"
+                        android:text="@string/closing_price"
+                        android:textAppearance="@style/TextAppearance.Cathay.Label" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvClosingPrice"
+                        style="@style/CathayAutoValueText"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/metric_value_height"
+                        android:layout_weight="1"
+                        tools:text="73.1"
+                        tools:textColor="@color/price_down" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 最高 / 最低 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/price_row_spacing"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/metric_cell_gap"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvHighestLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/spacing_sm"
+                        android:maxLines="1"
+                        android:text="@string/highest_price"
+                        android:textAppearance="@style/TextAppearance.Cathay.Label" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvHighestPrice"
+                        style="@style/CathayAutoValueText"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/metric_value_height"
+                        android:layout_weight="1"
+                        tools:text="74.4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvLowestLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/spacing_sm"
+                        android:maxLines="1"
+                        android:text="@string/lowest_price"
+                        android:textAppearance="@style/TextAppearance.Cathay.Label" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvLowestPrice"
+                        style="@style/CathayAutoValueText"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/metric_value_height"
+                        android:layout_weight="1"
+                        tools:text="72.7" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 漲跌 / 月均 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/price_row_spacing"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/metric_cell_gap"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvChangeLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/spacing_sm"
+                        android:maxLines="1"
+                        android:text="@string/change"
+                        android:textAppearance="@style/TextAppearance.Cathay.Label" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvChange"
+                        style="@style/CathayAutoValueText"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/metric_value_height"
+                        android:layout_weight="1"
+                        tools:text="-0.4"
+                        tools:textColor="@color/price_down" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvMonthlyLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/spacing_sm"
+                        android:maxLines="1"
+                        android:text="@string/monthly_avg_price"
+                        android:textAppearance="@style/TextAppearance.Cathay.Label" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvMonthlyAvg"
+                        style="@style/CathayAutoValueText"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/metric_value_height"
+                        android:layout_weight="1"
+                        tools:text="73.21" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/dividerFooter"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:id="@+id/layoutFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/spacing_sm"
+            android:paddingVertical="@dimen/spacing_md">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@dimen/footer_weight_transaction"
+                android:clipChildren="false"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingHorizontal="2dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvTransactionLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/transaction"
+                    android:textAppearance="@style/TextAppearance.Cathay.FooterLabel" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvTransaction"
+                    style="@style/CathayAutoFooterValueText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/footer_value_height"
+                    android:layout_marginTop="@dimen/spacing_xs"
+                    app:autoSizeMaxTextSize="@dimen/text_footer_value"
+                    app:autoSizeMinTextSize="@dimen/text_footer_value_min"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform"
+                    tools:text="5,732" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@dimen/footer_weight_volume"
+                android:clipChildren="false"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingHorizontal="2dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvVolumeLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/trade_volume"
+                    android:textAppearance="@style/TextAppearance.Cathay.FooterLabel" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvVolume"
+                    style="@style/CathayAutoFooterValueText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/footer_value_height"
+                    android:layout_marginTop="@dimen/spacing_xs"
+                    app:autoSizeMaxTextSize="@dimen/text_footer_value"
+                    app:autoSizeMinTextSize="@dimen/text_footer_value_min"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform"
+                    tools:text="3,688,844" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@dimen/footer_weight_value"
+                android:clipChildren="false"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingHorizontal="2dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvValueLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/trade_value"
+                    android:textAppearance="@style/TextAppearance.Cathay.FooterLabel" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvValue"
+                    style="@style/CathayAutoFooterValueText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/footer_value_height"
+                    android:layout_marginTop="@dimen/spacing_xs"
+                    app:autoSizeMaxTextSize="@dimen/text_footer_value"
+                    app:autoSizeMinTextSize="@dimen/text_footer_value_min"
+                    app:autoSizeStepGranularity="1sp"
+                    app:autoSizeTextType="uniform"
+                    tools:text="222,911,190" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

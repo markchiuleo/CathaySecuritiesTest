@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.CathaySecuritiesTest" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="android:statusBarColor">@color/primary</item>
+        <item name="android:navigationBarColor">@color/surface_light</item>
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.Cathay.MaterialAlertDialog</item>
+    </style>
+
+    <style name="ThemeOverlay.Cathay.MaterialAlertDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorPrimary">@color/primary</item>
+    </style>
+
+    <style name="Widget.Cathay.StockCard" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="cardBackgroundColor">@color/card_surface_a</item>
+        <item name="strokeColor">@color/card_stroke</item>
+        <item name="strokeWidth">@dimen/card_stroke_width</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="contentPadding">0dp</item>
+    </style>
+
+    <style name="TextAppearance.Cathay.ToolbarTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">@color/on_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Cathay.Code" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">@dimen/text_code</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/primary</item>
+    </style>
+
+    <style name="TextAppearance.Cathay.Name" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">@dimen/text_name</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/on_surface</item>
+    </style>
+
+    <style name="TextAppearance.Cathay.Label" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">@dimen/text_label</item>
+        <item name="android:textColor">@color/on_surface_variant</item>
+    </style>
+
+    <style name="TextAppearance.Cathay.Value" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">@dimen/text_value</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/on_surface</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.Cathay.FooterLabel" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">@dimen/text_footer_label</item>
+        <item name="android:textColor">@color/on_surface_variant</item>
+    </style>
+
+    <style name="TextAppearance.Cathay.FooterValue" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">@dimen/text_footer_value</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/on_surface</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- 數值文字：字級交給 autosize，這裡不要寫死 textSize -->
+    <style name="CathayAutoValueText">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/on_surface</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:gravity">end|center_vertical</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMinTextSize">@dimen/text_value_min</item>
+        <item name="autoSizeMaxTextSize">@dimen/text_value</item>
+        <item name="autoSizeStepGranularity">1sp</item>
+    </style>
+
+    <style name="CathayAutoFooterValueText">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/on_surface</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:gravity">center</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMinTextSize">@dimen/text_footer_value_min</item>
+        <item name="autoSizeMaxTextSize">@dimen/text_footer_value</item>
+        <item name="autoSizeStepGranularity">1sp</item>
+    </style>
+</resources>

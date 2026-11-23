@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">12dp</dimen>
+    <dimen name="spacing_lg">16dp</dimen>
+    <dimen name="spacing_xl">24dp</dimen>
+
+    <dimen name="card_corner_radius">14dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="card_stroke_width">1dp</dimen>
+    <dimen name="list_item_spacing">12dp</dimen>
+    <dimen name="list_horizontal_padding">14dp</dimen>
+    <dimen name="list_vertical_padding">12dp</dimen>
+    <dimen name="price_row_spacing">8dp</dimen>
+    <dimen name="metric_cell_gap">10dp</dimen>
+
+    <dimen name="text_code">12sp</dimen>
+    <dimen name="text_name">18sp</dimen>
+    <dimen name="text_label">12sp</dimen>
+    <dimen name="text_value">15sp</dimen>
+    <dimen name="text_value_min">8sp</dimen>
+    <dimen name="text_footer_value">13sp</dimen>
+    <dimen name="text_footer_value_min">7sp</dimen>
+    <dimen name="text_footer_label">11sp</dimen>
+
+    <dimen name="scrollbar_size">4dp</dimen>
+    <dimen name="metric_value_height">24dp</dimen>
+    <dimen name="footer_value_height">22dp</dimen>
+
+    <!-- Footer 寬度：成交筆數:成交股數:成交金額 = 2:3:5（金額通常最長） -->
+    <item name="footer_weight_transaction" format="float" type="dimen">2</item>
+    <item name="footer_weight_volume" format="float" type="dimen">3</item>
+    <item name="footer_weight_value" format="float" type="dimen">5</item>
+</resources>

@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">台股資訊列表</string>
+    <string name="stock_info_list">台股資訊列表</string>
+    <string name="menu_filter">排序</string>
+    <string name="confirm">確定</string>
+    <string name="retry">重試</string>
+    <string name="loading">資料載入中…</string>
+    <string name="empty_data">目前沒有可顯示的股票資料</string>
+    <string name="error_generic">資料載入失敗，請稍後再試</string>
+
+    <string name="opening_price">開盤價</string>
+    <string name="closing_price">收盤價</string>
+    <string name="highest_price">最高價</string>
+    <string name="lowest_price">最低價</string>
+    <string name="change">漲跌價差</string>
+    <string name="monthly_avg_price">月平均價</string>
+    <string name="transaction">成交筆數</string>
+    <string name="trade_volume">成交股數</string>
+    <string name="trade_value">成交金額</string>
+
+    <string name="pe_ratio">本益比</string>
+    <string name="dividend_yield">殖利率(%)</string>
+    <string name="pb_ratio">股價淨值比</string>
+    <string name="detail_title">%1$s %2$s</string>
+    <string name="detail_pe">本益比：%1$s</string>
+    <string name="detail_dividend">殖利率(%%)：%1$s</string>
+    <string name="detail_pb">股價淨值比：%1$s</string>
+
+    <string name="sort_type_by_code_desc">依股票代號降序</string>
+    <string name="sort_type_by_code_asc">依股票代號升序</string>
+    <string name="sort_sheet_title">排序方式</string>
+
+    <string name="placeholder_value">--</string>
+</resources>

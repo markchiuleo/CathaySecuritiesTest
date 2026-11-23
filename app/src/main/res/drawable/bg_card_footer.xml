@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Footer 背景改由 Adapter 依奇偶列動態設定；此檔保留預設淡色。 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/card_footer_a" />
+    <corners
+        android:bottomLeftRadius="@dimen/card_corner_radius"
+        android:bottomRightRadius="@dimen/card_corner_radius" />
+</shape>
